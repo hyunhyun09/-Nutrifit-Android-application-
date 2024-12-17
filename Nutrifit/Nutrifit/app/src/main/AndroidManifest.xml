@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 카메라 및 외부 저장소 권한 추가 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.Nutrifit"
+        android:supportsRtl="true">
+
+        <!-- FoodLens SDK 메타 데이터 추가 -->
+        <meta-data android:name="com.doinglab.foodlens.sdk.apptoken" android:value="@string/foodlens_app_token"/>
+        <meta-data android:name="com.doinglab.foodlens.sdk.companytoken" android:value="@string/foodlens_company_token"/>
+        <meta-data android:name="com.doinglab.foodlens.sdk.serveraddr" android:value="www.foodlens.com"/>
+        <!-- 메인 Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 기타 Activity들 -->
+        <activity
+            android:name=".CameraActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".CameraResultActivity"
+            android:exported="false"/>
+        <activity android:name=".UserInformActivity"
+            android:exported="false"/>
+
+        <!-- 파일 제공자 설정 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.nutrifit.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="androidx.core.content.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

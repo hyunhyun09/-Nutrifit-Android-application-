@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="식단 관리를 위한 정보를 입력해 주세요."
+            android:textStyle="bold"
+            android:paddingBottom="16dp" />
+
+        <EditText
+            android:id="@+id/userHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:hint="키(cm)"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/userWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:hint="몸무게(kg)"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/userAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:hint="나이"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/userGenderMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남성" />
+
+            <RadioButton
+                android:id="@+id/userGenderFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="여성" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/activitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:entries="@array/activityLevels"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가장 선호하는 밥 종류"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/riceRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioRice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="백미밥" />
+
+            <RadioButton
+                android:id="@+id/radioRiceMix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="잡곡밥" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가장 선호하는 국 종류"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/stewRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioCasserole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="찌개 및 전골류" />
+
+            <RadioButton
+                android:id="@+id/radioBoiled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="찜류" />
+
+            <RadioButton
+                android:id="@+id/radioSoup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="국 및 탕류" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가장 선호하는 반찬"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/sideDishRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioFried"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="튀김류" />
+
+            <RadioButton
+                android:id="@+id/radioGrilled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="구이류" />
+
+            <RadioButton
+                android:id="@+id/radioStirFried"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="볶음류" />
+
+            <RadioButton
+                android:id="@+id/radioMix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="무침류" />
+
+            <RadioButton
+                android:id="@+id/radioKP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전류" />
+
+            <RadioButton
+                android:id="@+id/radioBraised"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="조림류" />
+
+            <RadioButton
+                android:id="@+id/radioVeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나물류" />
+
+            <RadioButton
+                android:id="@+id/radioKimchi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김치류" />
+
+            <RadioButton
+                android:id="@+id/radioPK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="절임류" />
+
+            <RadioButton
+                android:id="@+id/radioJeot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="젓갈류" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="다음" />
+    </LinearLayout>
+</ScrollView>
